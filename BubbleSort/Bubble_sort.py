@@ -5,7 +5,6 @@
 #  * اللغة: Python
 #  * الكاتب: كريم
 #  /*
-
 def BubbleSort(arra):
    
     for i in range(len(arra)):
