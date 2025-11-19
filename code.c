@@ -15,10 +15,16 @@
 //   return (x+ y +z )/ 3.0;
 // }
 
-int Fib (int n){
-  if (n == 0 || n == 1) return n;
-   return  Fib(n-1) + Fib(n-2) ;
+// int Fib (int n){
+//   if (n == 0 || n == 1) return n;
+//    return  Fib(n-1) + Fib(n-2) ;
 
+// }
+
+
+
+float L(int km){
+  return km * 0.621371;
 }
 
 
@@ -37,9 +43,12 @@ int main() {
 // printf("adress of integers:%p\n",&x);
 // printf("valve store poin: %d\n",*p);
 // printf("adress of poin:%p",&p);
-  int num=5;
-  printf("the Fibonacci:%d",Fib(num));
-  
+  // int num=5;
+  // printf("the Fibonacci:%d",Fib(num));
+ int arr[]={1,5,10};
+ for(int i=0;i<3;i++){
+  printf("%d:km converts %.3f miles: \n",arr[i],L(arr[i]));
+ }
 return 0; }
 
  
