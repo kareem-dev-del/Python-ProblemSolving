@@ -11,17 +11,28 @@
 // }
 
 
-float avr(int x, int y , int z){
-  return (x+ y +z )/ 3.0;
-}
+// float avr(int x, int y , int z){
+//   return (x+ y +z )/ 3.0;
+// }
+
+
+
+
+
 int main() {
  
   // int array[]={1,2,3,4,5};
   // int sizee= sizeof(array) / sizeof(array[0]);
   // printf("tne max:%d",maxArray(array,sizee));
 
-  float x=5,y=4,z=1;
-  printf("The avrege:%.2f",avr(x,y,z));
+  // float x=5,y=4,z=1;
+  // printf("The avrege:%.2f",avr(x,y,z));
+int x=5;
+int *p=&x;
+printf("value:%d\n",x);
+printf("adress of integers:%p\n",&x);
+printf("valve store poin: %d\n",*p);
+printf("adress of poin:%p",&p);
 
   
 return 0; }
