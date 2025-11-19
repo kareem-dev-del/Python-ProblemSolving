@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 int main() {
-   char x[50] = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNO123456789";
-   printf("%lu",sizeof(x));
-   printf("%lu",strlen(x));
+  int arr[] = {1, 2, 3}; 
+  int p=arr;
+  printf("%d", p);
 
  return 0; }
 
