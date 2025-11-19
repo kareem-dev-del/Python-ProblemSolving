@@ -15,7 +15,11 @@
 //   return (x+ y +z )/ 3.0;
 // }
 
+int Fib (int n){
+  if (n == 0 || n == 1) return n;
+   return  Fib(n-1) + Fib(n-2) ;
 
+}
 
 
 
@@ -27,13 +31,14 @@ int main() {
 
   // float x=5,y=4,z=1;
   // printf("The avrege:%.2f",avr(x,y,z));
-int x=5;
-int *p=&x;
-printf("value:%d\n",x);
-printf("adress of integers:%p\n",&x);
-printf("valve store poin: %d\n",*p);
-printf("adress of poin:%p",&p);
-
+// int x=5;
+// int *p=&x;
+// printf("value:%d\n",x);
+// printf("adress of integers:%p\n",&x);
+// printf("valve store poin: %d\n",*p);
+// printf("adress of poin:%p",&p);
+  int num=5;
+  printf("the Fibonacci:%d",Fib(num));
   
 return 0; }
 
