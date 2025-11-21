@@ -3,7 +3,7 @@
  
 char x[20]="kareem";
 
-//printf("%d",sizeof(x));
+printf("%d",sizeof(x));
  
 
 return 0;
