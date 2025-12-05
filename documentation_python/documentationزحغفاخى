@@ -1,0 +1,162 @@
+# ==========================================
+# 1️⃣ Strings – التعامل مع النصوص
+# ==========================================
+text = "  Django Odoo  "
+print(len(text))           # طول النص
+print(text[0])             # الوصول لحرف محدد
+print(text[:6])            # slicing - أخذ جزء
+print(text[1:4])
+print(text.find('Odoo'))   # إيجاد موقع نص
+print(text.replace(" ", "")) # إزالة الفراغات
+print(text.strip())        # إزالة الفراغات من البداية والنهاية
+print(text.upper())        # تحويل كل الحروف لكابيتال
+print(text.lower())        # تحويل كل الحروف لصغير
+
+# ==========================================
+# 2️⃣ Lists – القوائم
+# ==========================================
+numbers = [1, 2, 3, 4, 5]
+print(numbers[0])          # الوصول لعنصر
+numbers.append(6)          # إضافة عنصر
+numbers.remove(3)          # إزالة عنصر
+print(numbers[1:4])        # slicing
+for n in numbers:          # التكرار
+    print(n)
+
+# ==========================================
+# 3️⃣ List Comprehension
+# ==========================================
+squares = [n**2 for n in numbers]
+evens = [n for n in numbers if n % 2 == 0]
+labels = ["even" if n%2==0 else "odd" for n in numbers]
+nested = [[i*j for j in range(1,4)] for i in range(1,4)]
+flat = [num for sublist in nested for num in sublist]
+
+# ==========================================
+# 4️⃣ Dicts – القواميس
+# ==========================================
+product = {"name": "Laptop", "price": 1500}
+print(product["name"])
+product["stock"] = 50       # إضافة مفتاح جديد
+del product["price"]        # حذف مفتاح
+for key, value in product.items():
+    print(key, value)
+
+# ==========================================
+# 5️⃣ Tuples
+# ==========================================
+point = (10, 20)
+x, y = point                # unpacking
+print(x, y)
+
+# ==========================================
+# 6️⃣ Conditions – الشروط
+# ==========================================
+price = 1500
+if price > 1000:
+    print("Expensive")
+elif price == 1000:
+    print("Moderate")
+else:
+    print("Affordable")
+
+# ==========================================
+# 7️⃣ Loops – التكرار
+# ==========================================
+for i in range(5):
+    print(i)
+
+i = 0
+while i < 5:
+    print(i)
+    i += 1
+
+# ==========================================
+# 8️⃣ Functions – الدوال
+# ==========================================
+def discount(price, rate):
+    return price * (1 - rate)
+
+print(discount(1500, 0.1))
+
+# ==========================================
+# 9️⃣ String / List / Dict / Tuple Operations
+# ==========================================
+text_list = text.split()         # تقسيم النص لقائمة
+joined = "-".join(text_list)     # دمج قائمة لنص
+numbers_sorted = sorted(numbers) # ترتيب قائمة
+numbers_reversed = list(reversed(numbers))
+
+# ==========================================
+# 🔟 File Handling / CSV / JSON
+# ==========================================
+import json
+
+data = '{"name":"Laptop","price":1500}'
+product_json = json.loads(data)  # JSON → Dict
+new_json = json.dumps(product_json)  # Dict → JSON
+
+with open("test.txt", "w") as f:  # كتابة ملف
+    f.write("Hello World")
+
+with open("test.txt", "r") as f:  # قراءة ملف
+    print(f.read())
+
+# ==========================================
+# 1️⃣1️⃣ Error Handling – Try / Except
+# ==========================================
+try:
+    price = int("abc")
+except ValueError:
+    price = 0
+
+print(price)
+
+# ==========================================
+# 1️⃣2️⃣ Modules / Libraries
+# ==========================================
+import math
+print(math.sqrt(16))
+import os
+print(os.getcwd())  # Current working directory
+
+# ==========================================
+# 1️⃣3️⃣ Decorators / @staticmethod / @classmethod
+# ==========================================
+class Product:
+    @staticmethod
+    def info():
+        print("This is a product class")
+        
+Product.info()
+
+# ==========================================
+# 1️⃣4️⃣ Lambda Functions
+# ==========================================
+add = lambda a, b: a + b
+print(add(3, 5))
+
+# ==========================================
+# 1️⃣5️⃣ Map / Filter / Reduce
+# ==========================================
+nums = [1,2,3,4,5]
+squared = list(map(lambda x: x**2, nums))
+evens = list(filter(lambda x: x%2==0, nums))
+from functools import reduce
+sum_all = reduce(lambda a,b: a+b, nums)
+print(squared, evens, sum_all)
+
+# ==========================================
+# 1️⃣6️⃣ Set – المجموعات
+# ==========================================
+fruits = {"apple", "banana", "cherry"}
+fruits.add("orange")
+fruits.remove("banana")
+print(fruits)
+
+# ==========================================
+# 1️⃣7️⃣ Comprehensions – Set / Dict
+# ==========================================
+squared_set = {x**2 for x in nums}
+squared_dict = {x: x**2 for x in nums}
+print(squared_set, squared_dict)
