@@ -24,6 +24,6 @@ if Palindrome(clean_input):
     print("The word is a Palindrome")   
 else :
    print("The word is  not a Palindrome")   
-
+ 
 
 
