@@ -3,35 +3,32 @@
 # نكرر k مرات: كل مرة نختار العنصر الأكثر تكرارًا، نضيفه للنتيجة، ونشيله من القائمة
 
 
-
-def x(nums):
-   count= {}
-   items= []
-   result = []
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        count= {}
+        items= []
+        result = []
 
    
-   for num in nums:
-        if num in count:
-            count[num] += 1
-        else:
-           count[num] = 1  
+        for num in nums:
+                if num in count:
+                    count[num] += 1
+                else:
+                 count[num] = 1  
 
 
-   for key in count:
-       items.append([key,count[key]])
+        for key in count:
+            items.append([key,count[key]])
 
 
-   for _ in range(1):
-       max_freq=-1
-       max_item=None
-       for item in items:
-           if item[1] > max_freq:
-               max_freq=item[1]
-               max_item=item
-          
-       result.append(max_item)
-       items.remove(max_item) 
-   return result  
-
-    
-print(x([1,2,3,2,4,5,1]) ) 
+        for _ in range(k):
+            max_freq=-1
+            max_item=None
+            for item in items:
+                if item[1] > max_freq:
+                    max_freq=item[1]
+                    max_item=item
+                
+            result.append(max_item[0])
+            items.remove(max_item) 
+        return result  
