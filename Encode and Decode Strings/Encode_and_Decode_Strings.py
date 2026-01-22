@@ -2,7 +2,7 @@
 
 # decode: بنقرأ الرقم قبل # عشان نعرف طول الكلمة، وبناخد العدد ده من الحروف بعده ونكرر لحد ما النص يخلص.
 
-#Day=>Three
+#Day=>Three=>https://neetcode.io/
 
 
 from typing import List
