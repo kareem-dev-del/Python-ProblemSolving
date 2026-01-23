@@ -8,11 +8,12 @@ class Solution:
         for i in range(len(nums)):
             x=1
             for j in range(len(nums)):
-                if nums[i] == nums[j]:
+                if i == j:
                     continue
                 else:
                     x*=nums[j]    
             result.append(x)  
         return result 
 sol= Solution()
-print(sol.productExceptSelf([1,2,4,6]))           
+print(sol.productExceptSelf([1,2,4,6]))    
+      
