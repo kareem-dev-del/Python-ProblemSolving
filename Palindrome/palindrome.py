@@ -6,24 +6,14 @@
 #  * اللغة: python
 #  * الكاتب: كريم
 #  */
-def Palindrome(word):
-    letters = list(word)
-    start =0
-    end = len(letters)-1
-    isPalindrome =True
-    while(start < end):
-        if letters[start] != letters[end] :
-            isPalindrome = False
-            break
-        start+=1
-        end-=1
-    return isPalindrome
-word =input("Enter Palindrome word:") 
-clean_input = word.replace(" ", "").lower()
-if Palindrome(clean_input):
-    print("The word is a Palindrome")   
-else :
-   print("The word is  not a Palindrome")   
+def Palindrome(s):
+     cleaned =''.join(char.lower() for char in s if char.isalnum())
+
+     return cleaned == cleaned[::-1]
+print(Palindrome("leviel"))
+
+
+   
  
 
 
