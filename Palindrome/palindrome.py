@@ -5,7 +5,7 @@
 #  *       البرنامج يتجاهل المسافات والحروف الكبيرة أثناء المقارنة.
 #  * اللغة: python
 #  * الكاتب: كريم
-#  */
+#  */ 
 def Palindrome(s):
      cleaned =''.join(char.lower() for char in s if char.isalnum())
 
